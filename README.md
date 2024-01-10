@@ -1,3 +1,35 @@
+## Answers to the questions:
+
+1. **Optimizing List Rendering:**
+    - Memoize components with `React.memo` to avoid re-renders.
+    - For huge lists, use a virtualized list.
+    - Use `useCallback` to memoize functions passed to child components.
+    - Use `useMemo` to memoize values passed to child components.
+    - Fetch and combine data as needed.
+
+2. **State vs Props in React:**
+    - State is owned by the component and can be changed.
+    - Props are owned by a parent component and can't be changed.
+    - For a feature like search that affects multiple components, we can save the input's value in state and pass it to the components that need it.
+
+3. **TypeScript in React:**
+    - Caches errors before going into production, by catching them during development.
+    - Makes code more clean and readable, also self-documenting.
+    - Good for defining prop types and catching misuse.
+
+4. **Pagination/Infinite Scrolling:**
+    - Save of the current page inside state, and fetch data as needed when the page changes, or reaching the end of the list.
+
+5. **Useful TypeScript Features:**
+    - Generics for reusable components.
+    - Utility types such as Omit, Partial, Pick, Record, etc...
+    - Decorators, thou they are not production ready yet, and also a lot less used in React.
+
+6. **Context API/Redux:**
+    - Context API is better for more simple state logic that doesn't change frequently.
+    - Redux offers a lot more rich set of features, and better for more complex state logic. (Thou there are other alternatives like Zustand what gained a lot of popularity recently caused by use-query)
+    - Wrap you App with the Context provider and use each of it's hooks to access the state and dispatch actions.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
